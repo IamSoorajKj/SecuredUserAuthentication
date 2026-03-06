@@ -29,13 +29,15 @@ function AvatarImage({
 
 function AvatarFallback({
   className,
+  delayMs = 600,
   ...props
 }) {
   return (
     (<AvatarPrimitive.Fallback
       data-slot="avatar-fallback"
+      delayMs={delayMs}
       className={cn(
-        "bg-muted flex size-full items-center justify-center rounded-full",
+        "bg-muted flex size-full items-center justify-center rounded-full text-xs font-medium uppercase",
         className
       )}
       {...props} />)

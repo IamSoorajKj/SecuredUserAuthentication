@@ -140,7 +140,7 @@ const Navbar = () => {
                                         {/* User Info Header */}
                                         <div className="px-4 py-2 flex items-center gap-3 bg-white/5 rounded-2xl mb-2">
                                             <Avatar className="h-10 w-10 ring-2 ring-white/10 shadow-lg">
-                                                <AvatarImage src={user?.avatar} referrerPolicy="no-referrer" />
+                                                <AvatarImage src={user?.avatar} referrerPolicy="no-referrer" className="animate-in fade-in duration-500" />
                                                 <AvatarFallback className="bg-gradient-to-br from-primary to-accent text-white font-heading">
                                                     {user?.username ? user.username[0].toUpperCase() : "U"}
                                                 </AvatarFallback>
