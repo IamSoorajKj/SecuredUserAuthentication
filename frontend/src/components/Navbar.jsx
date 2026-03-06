@@ -64,33 +64,35 @@ const Navbar = () => {
                         </ul>
 
                         {user ? (
-                            <DropdownMenu>
-                                <DropdownMenuTrigger className="outline-none">
-                                    <Avatar className="ring-2 ring-white/10 hover:ring-primary transition-all duration-300 shadow-lg cursor-pointer">
-                                        <AvatarImage src={user?.avatar} referrerPolicy="no-referrer" />
-                                        <AvatarFallback className="bg-gradient-to-br from-primary to-accent text-white font-heading">
-                                            {user?.username ? user.username[0].toUpperCase() : "U"}
-                                        </AvatarFallback>
-                                    </Avatar>
-                                </DropdownMenuTrigger>
-                                <DropdownMenuContent align="end" className="glass-card min-w-[16rem] max-w-[24rem] p-2 border-white/10 bg-black/60 backdrop-blur-3xl">
-                                    <DropdownMenuLabel className="font-normal">
-                                        <div className="flex flex-col space-y-1">
-                                            <p className="text-sm font-medium leading-none text-white truncate">{user.username}</p>
-                                            <p className="text-xs leading-tight text-white/50 break-all">{user.email}</p>
-                                        </div>
-                                    </DropdownMenuLabel>
-                                    <DropdownMenuSeparator className="bg-white/10" />
-                                    <DropdownMenuItem asChild className="cursor-pointer text-white/80 focus:bg-white/10 focus:text-white rounded-md transition-colors">
-                                        <Link to="/">
-                                            <User className="mr-2 h-4 w-4" />Profile
-                                        </Link>
-                                    </DropdownMenuItem>
+                            <div className="hidden md:block">
+                                <DropdownMenu>
+                                    <DropdownMenuTrigger className="outline-none">
+                                        <Avatar className="ring-2 ring-white/10 hover:ring-primary transition-all duration-300 shadow-lg cursor-pointer">
+                                            <AvatarImage src={user?.avatar} referrerPolicy="no-referrer" />
+                                            <AvatarFallback className="bg-gradient-to-br from-primary to-accent text-white font-heading">
+                                                {user?.username ? user.username[0].toUpperCase() : "U"}
+                                            </AvatarFallback>
+                                        </Avatar>
+                                    </DropdownMenuTrigger>
+                                    <DropdownMenuContent align="end" className="glass-card min-w-[16rem] max-w-[24rem] p-2 border-white/10 bg-black/60 backdrop-blur-3xl">
+                                        <DropdownMenuLabel className="font-normal">
+                                            <div className="flex flex-col space-y-1">
+                                                <p className="text-sm font-medium leading-none text-white truncate">{user.username}</p>
+                                                <p className="text-xs leading-tight text-white/50 break-all">{user.email}</p>
+                                            </div>
+                                        </DropdownMenuLabel>
+                                        <DropdownMenuSeparator className="bg-white/10" />
+                                        <DropdownMenuItem asChild className="cursor-pointer text-white/80 focus:bg-white/10 focus:text-white rounded-md transition-colors">
+                                            <Link to="/">
+                                                <User className="mr-2 h-4 w-4" />Profile
+                                            </Link>
+                                        </DropdownMenuItem>
 
-                                    <DropdownMenuSeparator className="bg-white/10" />
-                                    <DropdownMenuItem onClick={logoutHandler} className="cursor-pointer text-destructive focus:bg-destructive/10 focus:text-destructive rounded-md transition-colors"><LogOut className="mr-2 h-4 w-4" />Logout</DropdownMenuItem>
-                                </DropdownMenuContent>
-                            </DropdownMenu>
+                                        <DropdownMenuSeparator className="bg-white/10" />
+                                        <DropdownMenuItem onClick={logoutHandler} className="cursor-pointer text-destructive focus:bg-destructive/10 focus:text-destructive rounded-md transition-colors"><LogOut className="mr-2 h-4 w-4" />Logout</DropdownMenuItem>
+                                    </DropdownMenuContent>
+                                </DropdownMenu>
+                            </div>
                         ) : (
                             <div className="hidden md:flex gap-4 items-center">
                                 <Link to={'/login'} className='text-sm font-medium text-white/70 hover:text-white hover:text-glow transition-all duration-300'>

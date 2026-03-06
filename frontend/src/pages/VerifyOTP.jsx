@@ -141,7 +141,7 @@ const VerifyOTP = () => {
               ) : (
                 <>
                   {/* OTP Input */}
-                  <div className='flex justify-between gap-3 mb-6'>
+                  <div className='flex justify-between gap-1.5 md:gap-3 mb-6'>
                     {
                       otp.map((digit, index) => (
                         <Input
@@ -155,7 +155,7 @@ const VerifyOTP = () => {
                           maxLength={1}
                           ref={(el) => (inputRefs.current[index] = el)}
                           disabled={isVerified}
-                          className="w-14 h-16 text-center text-2xl font-heading font-bold glass-input rounded-xl focus:scale-110 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                          className="w-full max-w-[3.5rem] h-14 md:h-16 text-center text-xl md:text-2xl font-heading font-bold glass-input rounded-2xl focus:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed px-0 border-white/20 focus:border-primary"
                         />
                       ))
                     }

@@ -135,7 +135,7 @@ const Login = () => {
                                 </div>
                             </div>
                         </CardContent>
-                        <CardFooter className="flex-col gap-3 pt-1 pb-5 px-8">
+                        <CardFooter className="flex-col gap-4 pt-4 pb-6 px-8">
                             <Button type="submit" className="w-full h-11 text-base font-semibold bg-white text-black hover:bg-white/90 shadow-[0_0_20px_#ffffff33] hover:shadow-[0_0_30px_#ffffff66] transition-all hover:scale-[1.02] rounded-xl" disabled={isLoading}>
                                 {
                                     isLoading ? (
