@@ -103,8 +103,18 @@ const Navbar = () => {
                                 </Link>
                             </div>
                         )}
+                        {user && (
+                            <div className="md:hidden flex items-center mr-1">
+                                <Avatar className="h-8 w-8 ring-2 ring-white/10 shadow-lg cursor-pointer" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                                    <AvatarImage src={user?.avatar} referrerPolicy="no-referrer" />
+                                    <AvatarFallback className="bg-gradient-to-br from-primary to-accent text-white font-heading text-xs">
+                                        {user?.username ? user.username[0].toUpperCase() : "U"}
+                                    </AvatarFallback>
+                                </Avatar>
+                            </div>
+                        )}
                         <button
-                            className="md:hidden text-white p-2"
+                            className="md:hidden text-white p-2 hover:bg-white/5 rounded-full transition-colors"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         >
                             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
