@@ -37,7 +37,7 @@ const Signup = () => {
         e.preventDefault()
         try {
             setIsLoading(true)
-            const res = await axios.post(`http://localhost:8000/user/register`, formData, {
+            const res = await axios.post(`https://secureduserauthentication.onrender.com/user/register`, formData, {
                 headers: {
                     "Content-Type": "application/json"
                 }

@@ -27,7 +27,7 @@ const Home = () => {
               {!user && (
                 <Badge variant="secondary" className="mb-4 px-4 py-1.5 bg-primary/10 text-primary border border-primary/20 backdrop-blur-md rounded-full animate-in zoom-in duration-1000 shadow-[0_0_20px] shadow-primary/30">
                   <Zap className="w-3.5 h-3.5 mr-1.5 fill-primary" />
-                  <span className="font-medium tracking-wide text-xs uppercase">Welcome to the App</span>
+                  <span className="font-medium tracking-wide text-xs uppercase">Welcome to SecureAuth</span>
                 </Badge>
               )}
 

@@ -19,7 +19,7 @@ app.use(cors({
 app.use('/auth', authRoute)
 app.use('/user', userRoute)
 
-// http://localhost:8000/user/register
+
 
 
 app.listen(PORT, () => {

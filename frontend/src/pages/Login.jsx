@@ -43,7 +43,7 @@ const Login = () => {
         setError("")
         try {
             setIsLoading(true)
-            const res = await axios.post(`http://localhost:8000/user/login`, formData, {
+            const res = await axios.post(`https://secureduserauthentication.onrender.com/user/login`, formData, {
                 headers: {
                     "Content-Type": "application/json"
                 }
@@ -156,7 +156,7 @@ const Login = () => {
                                 </div>
                             </div>
 
-                            <Button type="button" onClick={() => window.open("http://localhost:8000/auth/google", "_self")} className='w-full h-11 glass hover:bg-white/5 transition-all text-white border-white/10 rounded-xl font-medium' variant='outline'>
+                            <Button type="button" onClick={() => window.open(`https://secureduserauthentication.onrender.com/auth/google`, "_self")} className='w-full h-11 glass hover:bg-white/5 transition-all text-white border-white/10 rounded-xl font-medium' variant='outline'>
                                 <img src={Google} className='w-5 h-5 mr-3 brightness-110' alt="Google" />
                                 Continue with Google
                             </Button>

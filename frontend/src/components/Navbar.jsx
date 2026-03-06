@@ -29,7 +29,7 @@ const Navbar = () => {
 
     const logoutHandler = async () => {
         try {
-            const res = await axios.post(`http://localhost:8000/user/logout`, {}, {
+            const res = await axios.post(`https://secureduserauthentication.onrender.com/user/logout`, {}, {
                 headers: {
                     Authorization: `Bearer ${accessToken}`
                 }
