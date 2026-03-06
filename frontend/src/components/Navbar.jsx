@@ -137,7 +137,7 @@ const Navbar = () => {
                                         <Link to="/login" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-2 hover:bg-white/5 rounded-xl transition-colors">
                                             Sign In
                                         </Link>
-                                        <Link to="/signup" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-2 hover:bg-white/5 rounded-xl transition-colors text-primary font-semibold">
+                                        <Link to="/signup" onClick={() => setIsMobileMenuOpen(false)} className="mx-4 bg-white text-black py-3 rounded-xl font-semibold text-center hover:bg-white/90 shadow-lg">
                                             Get Started
                                         </Link>
                                     </>
