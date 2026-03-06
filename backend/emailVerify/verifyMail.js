@@ -20,7 +20,10 @@ export const verifyMail = async (token, email) => {
         )
 
         const template = handlebars.compile(emailTemplateSource)
-        const htmlToSend = template({ token: encodeURIComponent(token) })
+        const htmlToSend = template({
+            token: encodeURIComponent(token),
+            clientUrl: process.env.CLIENT_URL || 'http://localhost:5173'
+        })
 
         await client.transactionalEmails.sendTransacEmail({
             subject: 'Email Verification',
