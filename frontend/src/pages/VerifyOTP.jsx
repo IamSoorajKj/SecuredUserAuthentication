@@ -87,9 +87,9 @@ const VerifyOTP = () => {
   }
 
   return (
-    <div className='relative w-full min-h-screen flex items-center justify-center overflow-hidden py-8 px-4'>
+    <div className='relative w-full min-h-screen flex items-center justify-center overflow-hidden py-4 px-4'>
 
-      <div className='w-full max-w-lg space-y-4 md:space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700 relative z-10'>
+      <div className='w-full max-w-lg space-y-2 md:space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700 relative z-10'>
         <div className='text-center space-y-3'>
           <h1 className='text-4xl font-heading font-bold tracking-tight text-white mb-2'>
             Verify Your Email
@@ -103,7 +103,7 @@ const VerifyOTP = () => {
           {/* Subtle top highlight */}
           <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
 
-          <CardHeader className='space-y-1 text-center pb-8 pt-8 relative z-10'>
+          <CardHeader className='space-y-1 text-center pb-4 pt-6 relative z-10'>
             <CardTitle className='text-2xl font-heading font-semibold tracking-wide text-white'>Enter OTP</CardTitle>
             <CardDescription className="text-white/50">
               {
@@ -125,17 +125,13 @@ const VerifyOTP = () => {
             {successMessage && <p className='text-[#4ade80] text-sm mb-3 text-center bg-[#4ade80]/10 py-3 rounded-xl border border-[#4ade80]/20 font-medium'>{successMessage}</p>}
             {
               isVerified ? (
-                <div className='py-6 flex flex-col items-center justify-center text-center space-y-4'>
-                  <div className='bg-primary/20 rounded-full p-4 shadow-[0_0_30px] shadow-primary/30'>
-                    <CheckCircle className='h-8 w-8 text-primary' />
+                <div className='py-4 flex flex-col items-center justify-center text-center space-y-3'>
+                  <div className='bg-primary/20 rounded-full p-3 shadow-[0_0_20px] shadow-primary/30'>
+                    <CheckCircle className='h-6 w-6 text-primary' />
                   </div>
-                  <div className='space-y-2'>
-                    <h3 className='font-heading font-medium text-xl text-white'>Verification Successful</h3>
-                    <p className='text-white/60'>Your email has been verified. You'll be redirected shortly.</p>
-                  </div>
-                  <div className='flex items-center space-x-3 text-white/80 pt-4'>
-                    <Loader2 className='h-5 w-5 animate-spin' />
-                    <span className='text-sm font-medium'>Redirecting...</span>
+                  <div className='space-y-1'>
+                    <h3 className='font-heading font-medium text-lg text-white'>Verification Successful</h3>
+                    <p className='text-xs text-white/60'>Your email has been verified. Redirecting...</p>
                   </div>
                 </div>
               ) : (
