@@ -125,6 +125,20 @@ const Navbar = () => {
 
                                 {user ? (
                                     <>
+                                        {/* User Info Header */}
+                                        <div className="px-4 py-2 flex items-center gap-3 bg-white/5 rounded-2xl mb-2">
+                                            <Avatar className="h-10 w-10 ring-2 ring-white/10 shadow-lg">
+                                                <AvatarImage src={user?.avatar} referrerPolicy="no-referrer" />
+                                                <AvatarFallback className="bg-gradient-to-br from-primary to-accent text-white font-heading">
+                                                    {user?.username ? user.username[0].toUpperCase() : "U"}
+                                                </AvatarFallback>
+                                            </Avatar>
+                                            <div className="flex flex-col min-w-0">
+                                                <p className="text-sm font-semibold text-white truncate">{user.username}</p>
+                                                <p className="text-xs text-white/50 truncate">{user.email}</p>
+                                            </div>
+                                        </div>
+
                                         <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-2 hover:bg-white/5 rounded-xl transition-colors flex items-center gap-2">
                                             <User className="w-4 h-4" /> Profile
                                         </Link>
