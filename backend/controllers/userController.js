@@ -27,6 +27,11 @@ export const registerUser = async (req, res) => {
             email,
             password: hashedPassword
         })
+
+        if (!process.env.SECRET_KEY) {
+            throw new Error("SECRET_KEY is not defined in environment variables")
+        }
+
         const token = jwt.sign({ id: newUser._id }, process.env.SECRET_KEY, { expiresIn: "10m" })
         verifyMail(token, email)
         newUser.token = token
@@ -112,6 +117,14 @@ export const loginUser = async (req, res) => {
                 message: "Unauthorized access"
             })
         }
+
+        if (!user.password) {
+            return res.status(400).json({
+                success: false,
+                message: "This account was created via Google. Please sign in using 'Continue with Google'."
+            })
+        }
+
         const passwordCheck = await bcrypt.compare(password, user.password)
         if (!passwordCheck) {
             return res.status(402).json({
@@ -136,6 +149,10 @@ export const loginUser = async (req, res) => {
 
         //create a new session
         await Session.create({ userId: user._id })
+
+        if (!process.env.SECRET_KEY) {
+            throw new Error("SECRET_KEY is not defined in environment variables")
+        }
 
         //Generate tokens
         const accessToken = jwt.sign({ id: user._id }, process.env.SECRET_KEY, { expiresIn: "10d" })

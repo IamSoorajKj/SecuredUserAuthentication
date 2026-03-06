@@ -92,7 +92,7 @@ const Navbar = () => {
                                 </DropdownMenuContent>
                             </DropdownMenu>
                         ) : (
-                            <div className="flex gap-4 items-center">
+                            <div className="hidden md:flex gap-4 items-center">
                                 <Link to={'/login'} className='text-sm font-medium text-white/70 hover:text-white hover:text-glow transition-all duration-300'>
                                     Sign In
                                 </Link>
@@ -118,6 +118,28 @@ const Navbar = () => {
                                 <li className="px-4 py-2 hover:bg-white/5 rounded-xl transition-colors cursor-pointer">Features</li>
                                 <li className="px-4 py-2 hover:bg-white/5 rounded-xl transition-colors cursor-pointer">Solutions</li>
                                 <li className="px-4 py-2 hover:bg-white/5 rounded-xl transition-colors cursor-pointer">Pricing</li>
+
+                                <div className="h-px bg-white/10 my-2"></div>
+
+                                {user ? (
+                                    <>
+                                        <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-2 hover:bg-white/5 rounded-xl transition-colors flex items-center gap-2">
+                                            <User className="w-4 h-4" /> Profile
+                                        </Link>
+                                        <button onClick={() => { logoutHandler(); setIsMobileMenuOpen(false); }} className="px-4 py-2 hover:bg-white/5 rounded-xl transition-colors flex items-center gap-2 text-destructive text-left">
+                                            <LogOut className="w-4 h-4" /> Logout
+                                        </button>
+                                    </>
+                                ) : (
+                                    <>
+                                        <Link to="/login" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-2 hover:bg-white/5 rounded-xl transition-colors">
+                                            Sign In
+                                        </Link>
+                                        <Link to="/signup" onClick={() => setIsMobileMenuOpen(false)} className="mx-4 bg-white text-black py-3 rounded-xl font-semibold text-center hover:bg-white/90 shadow-lg">
+                                            Get Started
+                                        </Link>
+                                    </>
+                                )}
                             </ul>
                         </div>
                     </div>

@@ -54,14 +54,14 @@ const Signup = () => {
     }
 
     return (
-        <div className='relative w-full min-h-screen flex items-center justify-center overflow-x-hidden pt-16 md:pt-24 pb-8 px-4'>
+        <div className='relative w-full min-h-screen flex items-center justify-center overflow-x-hidden pt-6 md:pt-24 pb-8 px-4'>
 
             <div className='w-full max-w-lg space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-700 relative z-10'>
-                <div className='text-center space-y-1'>
-                    <h1 className='text-3xl md:text-4xl font-heading font-bold tracking-tight text-white'>
+                <div className='text-center space-y-1 pb-2'>
+                    <h1 className='text-2xl md:text-4xl font-heading font-bold tracking-tight text-white'>
                         Sign Up
                     </h1>
-                    <p className='text-white/60 text-lg'> Enter your details to create your account</p>
+                    <p className='text-white/60 text-base md:text-lg'>Create your account to get started</p>
                 </div>
 
                 <Card className="glass-card border-white/10 overflow-hidden relative">
@@ -69,10 +69,10 @@ const Signup = () => {
                     <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
 
                     <form onSubmit={handleSubmit} className="relative z-10">
-                        <CardHeader className='space-y-1 text-center pb-4 pt-4'>
-                            <CardTitle className='text-xl md:text-2xl font-heading font-semibold text-white tracking-wide'>Sign Up</CardTitle>
-                            <CardDescription className="text-white/50">
-                                Enter your details to create your account
+                        <CardHeader className='space-y-1 text-center pb-3 pt-3'>
+                            <CardTitle className='text-lg md:text-2xl font-heading font-semibold text-white tracking-wide'>Create Account</CardTitle>
+                            <CardDescription className="text-white/40 text-xs md:text-sm">
+                                Enter your details to get started
                             </CardDescription>
                         </CardHeader>
                         <CardContent className="space-y-4 px-8">
@@ -131,7 +131,7 @@ const Signup = () => {
                                 </div>
                             </div>
                         </CardContent>
-                        <CardFooter className="flex-col gap-4 pt-2 pb-6 px-8">
+                        <CardFooter className="flex-col gap-3 pt-1 pb-5 px-8">
                             <Button type="submit" className="w-full h-11 text-base font-semibold bg-white text-black hover:bg-white/90 shadow-[0_0_20px_#ffffff33] hover:shadow-[0_0_30px_#ffffff66] transition-all hover:scale-[1.02] rounded-xl" disabled={isLoading}>
                                 {
                                     isLoading ? (
