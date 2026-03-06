@@ -68,7 +68,7 @@ const Navbar = () => {
                                 <DropdownMenu>
                                     <DropdownMenuTrigger className="outline-none">
                                         <Avatar className="ring-2 ring-white/10 hover:ring-primary transition-all duration-300 shadow-lg cursor-pointer">
-                                            <AvatarImage src={user?.avatar} referrerPolicy="no-referrer" />
+                                            <AvatarImage src={user?.avatar} referrerPolicy="no-referrer" className="animate-in fade-in duration-500" />
                                             <AvatarFallback className="bg-gradient-to-br from-primary to-accent text-white font-heading">
                                                 {user?.username ? user.username[0].toUpperCase() : "U"}
                                             </AvatarFallback>
@@ -106,7 +106,7 @@ const Navbar = () => {
                         {user && (
                             <div className="md:hidden flex items-center mr-1">
                                 <Avatar className="h-8 w-8 ring-2 ring-white/10 shadow-lg cursor-pointer" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                                    <AvatarImage src={user?.avatar} referrerPolicy="no-referrer" />
+                                    <AvatarImage src={user?.avatar} referrerPolicy="no-referrer" className="animate-in fade-in duration-500" />
                                     <AvatarFallback className="bg-gradient-to-br from-primary to-accent text-white font-heading text-xs">
                                         {user?.username ? user.username[0].toUpperCase() : "U"}
                                     </AvatarFallback>
