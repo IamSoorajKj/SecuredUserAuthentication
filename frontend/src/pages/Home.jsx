@@ -51,17 +51,17 @@ const Home = () => {
               </Button>
             </div>
 
-            <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs md:text-sm text-white/40 animate-in fade-in duration-1000 delay-500 font-medium">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary" />
+            <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-center gap-y-4 md:gap-x-8 text-xs md:text-sm text-white/40 animate-in fade-in duration-1000 delay-500 font-medium w-fit mx-auto">
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
                 <span>No credit card required</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary" />
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
                 <span>Enterprise grade security</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary" />
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
                 <span>14-day premium trial</span>
               </div>
             </div>
