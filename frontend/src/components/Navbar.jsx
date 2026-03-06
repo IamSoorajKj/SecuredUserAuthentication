@@ -48,7 +48,7 @@ const Navbar = () => {
     return (
         <nav className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? 'py-4' : 'py-6'}`}>
             <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-                <div className={`glass rounded-full px-6 py-3 flex justify-between items-center transition-all duration-500 ${scrolled ? 'shadow-[0_8px_32px_0_#00000080] border-white/10' : 'bg-transparent border-transparent shadow-none'}`}>
+                <div className={`glass rounded-full px-6 py-3 flex justify-between items-center transition-all duration-500 shadow-[0_8px_32px_0_rgba(0,0,0,0.4)] border-white/10 ${scrolled ? 'bg-black/40 backdrop-blur-2xl' : 'bg-black/20 backdrop-blur-md'}`}>
                     {/* logo section  */}
                     <Link to="/" className='flex gap-2 items-center group'>
                         <h1 className='font-heading font-bold text-xl tracking-tight text-white'>
