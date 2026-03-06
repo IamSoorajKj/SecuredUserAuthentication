@@ -48,7 +48,7 @@ const ChangePassword = () => {
         }
     }
     return (
-        <div className='relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-24 pb-8 px-4'>
+        <div className='relative w-full min-h-screen flex items-center justify-center overflow-hidden px-4'>
 
             <div className='w-full max-w-md animate-in fade-in slide-in-from-bottom-8 duration-700'>
                 <Card className="glass-card border-none">

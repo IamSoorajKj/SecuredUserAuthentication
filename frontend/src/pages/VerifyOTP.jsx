@@ -87,9 +87,9 @@ const VerifyOTP = () => {
   }
 
   return (
-    <div className='relative w-full min-h-screen flex items-center justify-center overflow-hidden py-12 px-4'>
+    <div className='relative w-full min-h-screen flex items-center justify-center overflow-hidden py-8 px-4'>
 
-      <div className='w-full max-w-lg space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700 relative z-10'>
+      <div className='w-full max-w-lg space-y-4 md:space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700 relative z-10'>
         <div className='text-center space-y-3'>
           <h1 className='text-4xl font-heading font-bold tracking-tight text-white mb-2'>
             Verify Your Email
