@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000
 
 app.use(express.json())
 app.use(cors({
-    origin: [process.env.CLIENT_URL, 'http://localhost:5173', 'http://localhost:5174', 'http://localhost:5175'],
+    origin: [process.env.CLIENT_URL, 'https://secured-user-authentication.vercel.app', 'http://localhost:5173', 'http://localhost:5174', 'http://localhost:5175'],
     credentials: true
 }))
 app.use('/auth', authRoute)
